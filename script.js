@@ -9,7 +9,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 
 // 3D Model Rendering
 document.addEventListener('DOMContentLoaded', () => {
-    // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer();
@@ -17,19 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('3d-printer-container').appendChild(renderer.domElement);
 
     // Set up lighting
-    const ambientLight = new THREE.AmbientLight(0x404040); // Ambient light
+    const ambientLight = new THREE.AmbientLight(0x404040);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0xffffff); // Point light
+    const pointLight = new THREE.PointLight(0xffffff);
     pointLight.position.set(10, 10, 10);
     scene.add(pointLight);
 
     // Load OBJ file
     const loader = new THREE.OBJLoader();
     loader.load('models/EM3_Rev1-2.obj', (object) => {
-        console.log('Model loaded successfully'); // Debugging line
+        console.log('Model loaded successfully');
         scene.add(object);
         object.position.set(0, 0, 0);
+        object.scale.set(1, 1, 1); // Adjust scale if needed
 
         // Animation loop
         function animate() {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         animate();
     }, undefined, (error) => {
-        console.error('Error loading model:', error); // Debugging line
+        console.error('Error loading model:', error);
     });
 
     camera.position.z = 10; // Adjust if necessary
