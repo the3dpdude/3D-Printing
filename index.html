@@ -18,10 +18,19 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <section>
-        <h2>Welcome to Our 3D Printing Services</h2>
-        <p>High-quality 3D prints and custom printing services.</p>
+    <section id="3d-printer">
+        <div id="3d-printer-container"></div>
     </section>
+    <section id="contact">
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/OBJLoader.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
