@@ -32,28 +32,16 @@
     </section>
     <section id="contact">
         <h2>Contact Us</h2>
-        <form>
+        <form id="contactForm">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
             <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea id="message" name="message" required></textarea>
             <button type="submit">Send</button>
         </form>
     </section>
     <script src="script.js"></script>
-
-    <div id="product1">
-        <h3>Product 1</h3>
-        <p>Product description</p>
-        <div id="paypal-button-container"></div>
-    </div>
-    
-    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
-    <script>
-        paypal.Buttons().render('#paypal-button-container');
-    </script>
-    
 </body>
 </html>
