@@ -3,10 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #44B344; /* Viper green background */
+    color: white; /* Default text color */
 }
 
 header, nav {
-    background-color: #333;
+    background-color: #339933; /* Darker shade of viper green */
     color: white;
     padding: 1rem;
 }
@@ -28,6 +30,10 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
+}
+
+nav a:hover {
+    color: #FFA500; /* Orange accent on hover */
 }
 
 /* 3D Printer Container */
@@ -59,16 +65,23 @@ form {
 input, textarea {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
+    border: 1px solid #339933; /* Border with darker viper green */
+    border-radius: 4px;
+}
+
+input:focus, textarea:focus {
+    border-color: #FFA500; /* Orange border on focus */
 }
 
 button {
     padding: 0.5rem;
-    background-color: #333;
+    background-color: #339933; /* Darker shade of viper green */
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #FFA500; /* Orange background on hover */
 }
